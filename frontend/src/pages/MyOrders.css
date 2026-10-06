@@ -1,0 +1,76 @@
+.my-orders-page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+
+.my-orders-page h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 32px;
+  color: #111827;
+}
+
+.order-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-card h2 {
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.order-card p {
+  margin: 8px 0;
+  color: #4b5563;
+}
+
+.order-card h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.order-product {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-top: 10px;
+  color: #374151;
+}
+
+.order-total {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.my-orders-message {
+  text-align: center;
+  margin-top: 30px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .my-orders-page {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .my-orders-page h1 {
+    font-size: 28px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+}
