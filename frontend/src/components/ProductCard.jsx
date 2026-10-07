@@ -6,17 +6,27 @@ import "./ProductCard.css";
 function ProductCard({ product }) {
   const { addToCart } = useContext(CartContext);
 
- const handleAddToCart = () => {
-  const token = localStorage.getItem("access_token");
+  // Product ID ke according local image
+  const productImages = {
+    1: "/products/wireless_headphones.png",
+    2: "/products/smart_watch.png",
+    3: "/products/bluetooth_speaker.png",
+  };
 
-  if (!token) {
-    alert("Please login first to add products to cart.");
-    return;
-  }
+  const imageUrl =
+    productImages[product.id] || "/products/wireless_headphones.png";
 
-  addToCart(product);
-  alert(`${product.name} added to cart successfully!`);
-};
+  const handleAddToCart = () => {
+    const token = localStorage.getItem("access_token");
+
+    if (!token) {
+      alert("Please login first to add products to cart.");
+      return;
+    }
+
+    addToCart(product);
+    alert(`${product.name} added to cart successfully!`);
+  };
 
   return (
     <div className="product-card">
@@ -26,7 +36,7 @@ function ProductCard({ product }) {
       >
         <div className="product-image">
           <img
-            src={product.image}
+            src={imageUrl}
             alt={product.name}
           />
         </div>
