@@ -8,7 +8,7 @@ function ProductList() {
 
   useEffect(() => {
     axios
-      .get("http://https://shopease-ecommerce-wl99.onrender.com/api/products/")
+      .get("https://shopease-ecommerce-wl99.onrender.com/api/products/")
       .then((response) => {
         setProducts(response.data);
       })
