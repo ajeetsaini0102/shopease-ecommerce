@@ -37,7 +37,7 @@ function Checkout() {
     try {
       // Django se Razorpay order create karna
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/payment/create-order/",
+        "http://https://shopease-ecommerce-wl99.onrender.com/api/payment/create-order/",
         {
           amount: totalPrice,
         }
@@ -63,7 +63,7 @@ function Checkout() {
           try {
             // Payment ko Django par verify karna
             const verifyResponse = await axios.post(
-              "http://127.0.0.1:8000/api/payment/verify/",
+              "http://https://shopease-ecommerce-wl99.onrender.com/api/payment/verify/",
               {
                 razorpay_payment_id:
                   paymentResponse.razorpay_payment_id,

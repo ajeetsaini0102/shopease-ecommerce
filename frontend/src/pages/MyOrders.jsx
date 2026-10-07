@@ -16,7 +16,7 @@ function MyOrders() {
 
     axios
       .get(
-        `http://127.0.0.1:8000/api/my-orders/?email=${email}`
+        `http://https://shopease-ecommerce-wl99.onrender.com/api/my-orders/?email=${email}`
       )
       .then((response) => {
         setOrders(response.data);
